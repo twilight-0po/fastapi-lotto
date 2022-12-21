@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .image_container{
+            display: flex;
+        }
+        .award{
+            display: flex;
+            width:100px;
+            height: 100px;
+        }
+    </style>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또</title>
+    <link href="{{ url_for('staticFiles', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1> 이렇게 다양한 상품이?</h1>
+        <div class="image_container">
+        <img class="award" src="{{ url_for('staticFiles', path='/coin.jpg') }}">
+        <img class="award" src="{{ url_for('staticFiles', path='/hair_pin.jpg') }}">
+        <img class="award" src="{{ url_for('staticFiles', path='/light.jpg') }}">
+        <img class="award" src="{{ url_for('staticFiles', path='/red_het.jpg') }}">
+    </div>
+    <a class="lotto" href="/lottery">로또!!</a>
+    <h1 style="color:red;">수익률 1000%!!</h1>
+    <p>
+            고**:응모햇더니 다음날 아이폰이 왓어요!!
+    </p>
+        <p>
+            배**:헐 대박, 반포자이가 내 눈 아페
+        </p>
+        <p>
+            박**: 대박이라능;;
+        </p>
+    <p>오**: 최고라능;; </p>
+    </div>
+    
+</body>
+</html>
