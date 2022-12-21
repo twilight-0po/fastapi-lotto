@@ -1,15 +1,5 @@
 from fastapi import FastAPI
 
-# Download the helper library from https://www.twilio.com/docs/python/install
-import os
-from twilio.rest import Client
-
-# Set environment variables for your credentials
-# Read more at http://twil.io/secure
-account_sid = "AC7b46e594a5ff0c58143ecfbed6cb55d9"
-auth_token = "ee4a7991107b09a1d7bd62f11a6870b8"
-client = Client(account_sid, auth_token)
-
 
 app = FastAPI()
 
@@ -60,10 +50,9 @@ async def submit_number(request: Request ,input_number = Form()):
         product_num = random.randint(0, len(award) - 1)
         product = award[product_num]
         award.remove(product)
-        message = client.messages.create(
-        body= input_number +  product_dict.get(product),
-        from_="+12136000248",
-        to="+821084752286"
-        )
-        print(message.sid)
+    with open('student_name.txt', 'a') as f:
+        f.write(input_number +"번  ")
+
+        f.write(product_dict.get(product))
+        f.write('\n')
     return templates.TemplateResponse("award.html", {"request": request, "input_number":input_number, "product":product})
