@@ -1,6 +1,6 @@
-body{
+.container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     width: 100vh;
 }
@@ -13,6 +13,7 @@ body{
     font-weight: 600;
     border-radius: 15px;
     text-align: center;
+
     text-decoration: none;
 
 }
@@ -25,15 +26,12 @@ body{
     font-weight: 600;
 }
 
-.high_profit{
-    color: red;
-}
 
-.award {
-    height: 50px;
-    width: 50px;
-}
-
-.image_continer {
+.image_container{
     display: flex;
+}
+.award{
+    display: flex;
+    width:100px;
+    height: 100px;
 }

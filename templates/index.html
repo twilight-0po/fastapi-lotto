@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .image_container{
-            display: flex;
-        }
-        .award{
-            display: flex;
-            width:100px;
-            height: 100px;
-        }
-    </style>  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +11,11 @@
     <div class="container">
         <h1> 이렇게 다양한 상품이?</h1>
         <div class="image_container">
-        <img class="award" src="{{ url_for('staticFiles', path='/coin.jpg') }}">
-        <img class="award" src="{{ url_for('staticFiles', path='/hair_pin.jpg') }}">
-        <img class="award" src="{{ url_for('staticFiles', path='/light.jpg') }}">
-        <img class="award" src="{{ url_for('staticFiles', path='/red_het.jpg') }}">
-    </div>
+        <img class="award" src="staticFiles/coin.jpg">
+        <img class="award" src="staticFiles/hair_pin.jpg">
+        <img class="award" src="staticFiles/light.jpg">
+        <img class="award" src="staticFiles/red_hat.jpg">
+        </div>
     <a class="lotto" href="/lottery">로또!!</a>
     <h1 style="color:red;">수익률 1000%!!</h1>
     <p>
