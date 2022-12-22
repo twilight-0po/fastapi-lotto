@@ -35,7 +35,7 @@ async def lotto_clk(request: Request):
 @app.post("/lottery/chose", response_class=HTMLResponse)
 async def submit_number(request: Request ,input_number = Form()):
     if input_number in student_list:
-        return templates.TemplateResponse("close.html", {"request": request})
+        return templates.TemplateResponse("close.html", {"request": request, "input_number": input_number})
     else:
         student_list.append(input_number)
     if len(award) == 0:
